@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net452;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>net452;netcoreapp3.1</TargetFrameworks>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(SolutionDir)NServiceBus.snk</AssemblyOriginatorKeyFile>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -12,17 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NServiceBus" Version="7.1.0" />
-    <PackageReference Include="WindowsAzure.Storage" Version="9.*" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0" />
-    <PackageReference Include="NUnit" Version="3.10.1" />
-    <!-- requries a version that works with PublicApiGenerator (Mono.Cecil) -->
-    <PackageReference Include="NUnit3TestAdapter" Version="3.8.0-alpha1" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
-    <PackageReference Include="ApprovalTests" Version="3.0.15" />
-    <PackageReference Include="PublicApiGenerator" Version="6.*" />
+    <PackageReference Include="NServiceBus" Version="7.2.3" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Particular.Approvals" Version="0.2.0" />
+    <PackageReference Include="PublicApiGenerator" Version="9.3.0" />
   </ItemGroup>
 
 </Project>
